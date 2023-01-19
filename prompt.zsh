@@ -37,10 +37,10 @@ function show_path {
 }
 
 function show_git {
-    local gitinfo=$(__git_ps1)
+    local gitinfo=$(__git_ps1 " %%F{magenta}%s%%f")
     if [[ $gitinfo != "" ]]
     then
-        echo "%F{magenta}$gitinfo%f"
+        echo $gitinfo
     fi
 }
 
